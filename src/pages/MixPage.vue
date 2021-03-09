@@ -1,15 +1,18 @@
 <template>
   <div class="starter-page">
     <div class="section text-center">
-      <h3>Bienvenue sur MixOnline !</h3>
+      <h3>Mix Assistant</h3>
+      <AudioMixer />
     </div>
   </div>
 </template>
 <script>
+import AudioMixer from "@/components/AudioMixer";
 export default {
-  name: 'starter',
-  components: {}
+  name: 'mix',
+  components: {AudioMixer},
 };
+
 </script>
 <style>
 .starter-page {

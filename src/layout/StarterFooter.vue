@@ -36,11 +36,10 @@
         >. Coded by
         <a href="https://binarcode.com" target="_blank" rel="noopener"
           >BinarCode</a
-        >
-        and
+        >,
         <a href="https://www.creative-tim.com" target="_blank" rel="noopener"
           >Creative Tim</a
-        >.
+        > & Zayed Charef.
       </div>
     </div>
   </footer>

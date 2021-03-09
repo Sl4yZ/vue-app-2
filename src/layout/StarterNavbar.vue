@@ -1,8 +1,8 @@
 <template>
   <navbar position="fixed" type="primary" menu-classes="ml-auto">
     <template v-slot:="{ toggle, isToggled }">
-      <router-link v-popover:popover1 class="navbar-brand" to="/presentation">
-        My Site Name
+      <router-link v-popover:popover1 class="navbar-brand" to="/">
+        MixOnline
       </router-link>
 
       <el-popover
@@ -13,17 +13,23 @@
         trigger="hover"
       >
         <div class="popover-body">
-          Designed by Invision. Coded by Creative Tim
+          Designed by Invision. Coded by Creative Tim & Zayed Charef
         </div>
         <div>
         </div>
       </el-popover>
     </template>
     <template slot="navbar-menu">
-      <drop-down tag="li" title="Sample Dropdown">
+      <drop-down tag="li" title="MENU">
+        <router-link class="special" to="/mix">
         <nav-link class="dropdown-item">
-          <i class="now-ui-icons shopping_box"></i> Headers
+
+          <i class="now-ui-icons shopping_box"></i>
+          Mix Assistant
+
         </nav-link>
+        </router-link>
+
       </drop-down>
     </template>
   </navbar>
@@ -44,4 +50,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.special{
+  color: #2c2c2c !important;
+}
+</style>
