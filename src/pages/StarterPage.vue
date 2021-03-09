@@ -1,14 +1,13 @@
 <template>
   <div class="starter-page">
-    <div class="section text-center">
-      <h3>Bienvenue sur MixOnline !</h3>
-    </div>
+    <HomePageWelcome/>
   </div>
 </template>
 <script>
+import HomePageWelcome from "@/pages/components/HomePageWelcome";
 export default {
   name: 'starter',
-  components: {}
+  components: {HomePageWelcome}
 };
 </script>
 <style>
