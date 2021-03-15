@@ -8,6 +8,7 @@
             theme="dark"
             :showPan="true"
             :showTotalTime="true"
+            @loaded="testt"
         />
         <div v-for="(c, index) in urls" :key="index">
           <input v-model="urls[index]" aria-describedby="addon-right addon-left" placeholder="Regular" class="form-control">
@@ -15,6 +16,7 @@
         </div>
         <button type="button" class="btn btn-primary" @click="addNewTrack">ADD NEW </button>
         <button type="button" class="btn btn-primary" @click="updateConfig">RELOAD</button>
+        <button type="button" class="btn btn-primary" @click="checkState">CHECK STATE</button>
 
       </div>
     </div>
@@ -108,7 +110,14 @@ export default {
       this.urls.splice(index, 1);
       console.log(this.urls)
       this.updateConfig();
-      this.is_loaded = false;
+      console.log(this.is_loaded);
+    },
+    checkState() {
+      console.log(this.is_loaded);
+    },
+    testt (e) {
+      this.is_loaded = e;
+      console.log(e);
     },
     updateConfig () {
       this.config.tracks.length = 0;
@@ -123,7 +132,6 @@ export default {
         })
       }
       console.log(this.urls)
-      this.is_loaded = false;
     }
   },
 }
